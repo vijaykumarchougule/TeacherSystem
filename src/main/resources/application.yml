@@ -2,6 +2,8 @@ server:
   port: 8081
   
 spring:
+  application:
+    name: TeacherSystem
   datasource:
     url: jdbc:mysql://localhost:3306/teachersystem
     username: root
@@ -16,7 +18,15 @@ spring:
 
   
 
-
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8090/eureka
+       
     
     
     
